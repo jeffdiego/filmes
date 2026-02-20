@@ -1,0 +1,14 @@
+fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', {
+method: 'GET',
+headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlYzJhMWU5NzA1ZmQ5OThlYWRkYjY1ZWY0MzhmZWMyNiIsIm5iZiI6MTc1MjAxODg1NC43MzYsInN1YiI6IjY4NmRhZmE2MjkxMzA3NjU2MzcwM2E1OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.rJXlKvSxImiQKdosZS6WivzKR7R064r6k2jvDIYgg5c'
+}
+})
+.then(function(response) {
+    return response.json();
+})
+.then(function(data) {
+console.log(data.results);
+
+})
